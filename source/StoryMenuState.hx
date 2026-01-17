@@ -70,6 +70,14 @@ class StoryMenuState extends MusicBeatState
 		DiscordClient.changePresence("In the Story Mode Menu", null);
 		#end
 
+    #if mobile
+    addVirtualPad(FULL, A_B);
+    #end
+
+   super.create(); // isso geralmente fica no finalzinho
+}
+
+
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;
 
